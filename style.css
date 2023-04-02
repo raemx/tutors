@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+
+
+/* Colours :  yellow #845404 blue #2a323d ligt blue #717d81 
+/* Reset whole page */
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-sarif;
+  background-color: black;
+}
+
+.navbar {
+  padding: .8rem;
+  
+}
+
+/* Navbar */
+
+.navbar-nav li{
+  padding-right: 20px;
+}
+
+.navbar-brand, .nav-link, .navbar-nav, .ml-auto{
+  color: #845404;
+}
+
+.nav-link{
+  font-size: 1.1em !important;
+}
+
+.navbar-custom {
+  background-color: black;
+}
+
+.navbar-brand img{
+  width: 7em;
+}
+/* First section carousel */
+
+.carousel-item img{
+  height: 50em;
+}
+
+.carousel-inner img{
+  width: 100%;
+  height: 100%;
+}
+/* Image takes the full screen */
+.carousel-caption{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-caption h2{
+  font-size: 200%;
+  padding: 1em;
+  text-shadow: 1px 1px 15spx #000;
+}
+
+.carousel-caption h1{
+  font-size: 400%;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 15spx #000;
+}
+.carousel-caption h3{
+  font-size: 175%;
+  font-weight: 500;
+  text-shadow: 1px 1px 1px 10px #000;
+  padding-bottom: 1rem;
+} 
+
+
+.card, .big{
+  top: 45%;
+  transform: translateY(-45%);
+  background-color: rgba(196, 27, 52, 0.8);
+}
+
+.card {
+  background-color: #2a323d;
+  margin: auto;
+  /* transform: scale(0.8, 0.8); */
+}
+
+.btn-primary{
+  background-color: black;
+  border: 1px solid #2a323d;
+}
+
+.btn-primary:hover{
+  background-color: #717d81;
+  border: 1px solid  #717d81;
+}
+
+/* .fixed {
+  background-image: url("img/city3.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+} */
+
+
+/* Jumbotron */
+
+.jumbotron{
+  
+  background-color: #2a323d;
+}
+
+.col-12 h1{
+  padding-top: 1.5em;
+}
+ul {
+  list-style-type: none;
+  font-size: 1.5em;
+  color:#717d81;
+}
+button.goal{
+  display: flex;
+  justify-content: right;
+  align-items: right;
+
+}
+b{
+  color: #845404;
+}
+
+.padding{
+  padding-bottom:2rem;
+}
+
+.welcome {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 0rem;
+}
+
+.welcome hr{
+  border-top: 2px solid#b4b4b4;
+  width: 95%;
+  margin-top: .3rem;
+  margin-bottom: 1rem;
+}
+
+
+
+.full-img {
+  background-image: url("img/tablet.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* .two{
+  background-color: #641454;
+} */
+
+
+/* Social Media */
+
+.social a{
+  font-size: 4.5em;
+  padding: 3rem;
+}
+
+.fa-facebook{
+  color: #3b5598;
+
+}
+
+.fa-twitter{
+  color: #00aced;
+}
+
+.fa-linkedin:hover,
+.fa-facebook:hover,
+.fa-twitter:hover,
+.fa-envelope:hover,
+.fa-linkedin:hover{
+  color: #d5d5d5;
+}
+
+footer{
+  padding-top: 1.5em;
+  background-color: #2a323d;
+  color: black;
+  /* padding-top: 2rem; */
+}
+
+footer a{
+  color: #d5d5d5;
+}
+
+
+
+
+hr.light{
+  border-top: 1px solid #d5d5d5;
+  width: 75%;
+  margin-top: .8rem;
+  margin-bottom: 1rem;
+}
+
+hr.light-100{
+  border-top: 1px solid #d5d5d5;
+  width: 100%;
+  margin-top: .8rem;
+  margin-bottom: 1rem;
+}
+
+/*---Media Queries --*/
+@media (max-width: 992px) {
+  .social a{
+    font-size: 4em;
+    padding: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .carousel-caption{
+    top: 45%;
+  }
+  
+  .carousel-caption h2{
+    font-size: 100%;
+    padding: 1em;
+    text-shadow: 1px 1px 15spx #000;
+  }
+  
+  .carousel-caption h1{
+    font-size: 200%;
+  }
+  .carousel-caption h3{
+    font-size: 100%;
+    font-weight: 400;
+    padding-bottom: .1rem;
+  } 
+  
+  
+}
+@media (max-width: 576px) {
+  
+}
+
+/*---Firefox Bug Fix --*/
+.carousel-item {
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}
+/*--- Fixed Background Image --*/
+figure {
+  position: relative;
+  width: 100%;
+  height: 60%;
+  margin: 0!important;
+}
+.fixed-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#fixed {
+  /* background-image: url('img/client.jpg'); */
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  will-change: transform;
+}
+/*--- Bootstrap Padding Fix --*/
+[class*="col-"] {
+    padding: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+

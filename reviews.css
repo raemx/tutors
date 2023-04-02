@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+/* Colours :  yellow #845404 blue #2a323d ligt blue #717d81 */
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Poppins', sans-sarif;
+    color: #000000;
+    background-color: black;
+  }
+
+  section{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding: 100px 20vw;
+  }
+
+  .red{
+    background: #ec0404;
+  }
+
+  .pink{
+    background-color: #f2aaa7;;
+  }
+
+  .purple{
+    background-color: #641454;
+  }
+
+  .dpink{
+    background-color: #c41b34;
+  }
+
+  .column{
+    float: left;
+
+  }
+
+  div#wrapper #content .col-12 .rev{
+    float: left;
+    display: flex;
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+
+  
+  .zero{
+    width: 50%;
+  }
+
+  .one, .four{
+    width: 35%;
+  }
+  
+  .two, .three {
+    width: 65%;
+  }
+ 
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    display: flex;
+  }
+
+  div#wrapper {
+    background-color: black;
+    width: 1000px;
+    margin: 0 auto;
+    /* height: 100%; */
+    text-align: left;
+    display: block;
+ }
+
+ hr.sep{
+  border: 10px solid #2a323d;
+  border-radius: 10px;
+}
+ 
+
+
+  .bubble::after{
+    content: '';
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+    position: absolute;
+    bottom: 0;
+    height: 85%;
+    width: 100%;
+    background-color: #ec0404;
+    z-index: -1;
+  }
+
+  /* Top curve purple for Founders */
+
+  .custom-shape-divider-top-1658364333 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1658364333 svg {
+    position: relative;
+    display: block;
+    width: calc(125% + 1.3px);
+    height: 500px;
+}
+
+.custom-shape-divider-top-1658364333 .shape-fill {
+    fill: #FFFFFF;
+}
+
+  .custom-shape-divider-bottom-1658356513 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1658356513 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 192px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1658356513 .shape-fill {
+    fill: #ffffff;
+}
+
+/* Blob moving */
+.flip{
+  transform: rotate(180deg);
+}
+
+/* .layer2{
+  background-image: url('./layer2.svg');
+} */
+
+.blob-motion{
+  position: absolute;
+  transform: translateY(-20%);
+}
+  
+  .curve{
+    position: absolute;
+    height: 225px;
+    width: 100%;
+    bottom: 0;
+  }
+
+  .curve::before{
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    height: 100%;
+    width: 55%;
+    background-color:  #ec0404;
+    transform: translate(85%, 60%);
+    z-index: -1;
+  }
+  .curve::after{
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    height: 100%;
+    width: 55%;
+    background-color: #ec0404; 
+    transform: translate(-4%, 40%);
+    z-index: -1;
+  }
+
+  .padding{
+    padding-bottom:2rem;
+  } 
+  
+  .navbar {
+    padding: .8rem;
+    
+  }
+
+  section h1{
+    color:white;
+    text-align: center;
+  }
+
+  /* .circle {
+    height: auto;
+    width: 50%;
+    background-color: #555;
+    border-radius: 50%;
+  } */
+
+  .carousel-inner img{
+    width: 100%;
+    height: 100%;
+  }
+
+  .card {
+    margin: 30px auto;
+    width: 300px;
+    height: 200px;
+    border-radius: 40px;
+  box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+    cursor: pointer;
+ 
+  }
+
+.card-body{
+  padding-bottom: none;
+  margin-bottom: none;
+}
+ 
+
+  .card.main{
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.8;
+    color: #641454;
+    left: 0;
+    padding-bottom: 0px;
+    
+  }
+
+  h5.card-title{
+    text-align: left;
+  }
+*/
+  /* Navbar */
+
+.navbar-nav li{
+  padding-right: 20px;
+}
+
+.navbar-brand, .nav-link, .navbar-nav, .ml-auto{
+  color: #845404;
+}
+
+.nav-link{
+  font-size: 1.1em !important;
+}
+
+.navbar-custom {
+  background-color: black;
+}
+
+.navbar-brand img{
+  width: 7em;
+}
+
+  hr.light{
+    border-top: 1px solid #d5d5d5;
+    width: 75%;
+    margin-top: .8rem;
+    margin-bottom: 1rem;
+  }
+  
+  hr.light-100{
+    border-top: 1px solid #d5d5d5;
+    width: 100%;
+    margin-top: .8rem;
+    margin-bottom: 1rem;
+  }
+
+ul {
+    display: inline;
+    float: left;
+}
+
+  :root {
+    --surface-color: #fff;
+    --curve: 40;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+
+  /*Footer*/
+
+  .social a{
+    font-size: 4.5em;
+    padding: 3rem;
+  }
+  
+  .fa-facebook{
+    color: #3b5598;
+  
+  }
+  
+  .fa-twitter{
+    color: #00aced;
+  }
+  
+  .fa-linkedin:hover,
+  .fa-facebook:hover,
+  .fa-twitter:hover,
+  .fa-envelope:hover,
+  .fa-linkedin:hover{
+    color: #d5d5d5;
+  }
+  footer{
+    padding-top: 1.5em;
+    background-color: #2a323d;
+    color: black;
+    /* padding-top: 2rem; */
+  }
+  
+  footer a{
+    color: #d5d5d5;
+  }
+  
+  /*---Media Queries --*/
+@media (max-width: 992px) {
+  .social a{
+    font-size: 4em;
+    padding: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .carousel-caption{
+    top: 45%;
+  }
+  
+  .carousel-caption h2{
+    font-size: 100%;
+    padding: 1em;
+    text-shadow: 1px 1px 15spx #000;
+  }
+  
+  .carousel-caption h1{
+    font-size: 200%;
+  }
+  .carousel-caption h3{
+    font-size: 100%;
+    font-weight: 400;
+    padding-bottom: .1rem;
+  } 
+
+  div#wrapper{
+    /* height: 100%; */
+    display: flex;
+		flex-direction: column;
+    width: 70%;
+ }
+    .rev{
+      display: flex;
+		flex-direction: column;
+      width: 100%;
+    }
+
+ .column{
+  flex-direction: column;
+  min-height: 300px;
+  width: 100%;
+  }
+
+  
+  
+}
+@media (max-width: 576px) {
+  
+}
+
+.jumbotron{
+
+  width: 100%;
+  height: 100%;
+}
+
+p{
+  color: #717d81
+}
