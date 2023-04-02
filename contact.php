@@ -178,7 +178,9 @@ if (!empty($_POST)) {
             <a class="navbar-brand" href="index.html"><img src="img/logo.jpg"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"> 
                 <!-- collapse allows it to close -->
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon">   
+                <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
+            </span>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
@@ -196,10 +198,10 @@ if (!empty($_POST)) {
             </div>
         </div>
     </nav> 
-  
 
-    
+
 <div class="contact-us">
+<h1 class="display-2 first">Contact Us</h1>
     <form method="post" id="contact-form">
       <label for="name">NAME <em>&#x2a;</em>
     </label>
@@ -228,7 +230,7 @@ if (!empty($_POST)) {
                             <div class="col-12 social padding">
                                 <a href="https://www.facebook.com/ArabicTutors/"><i class="fab fa-facebook"></i></a>
                                 <a href="mailto:onlinequran779@gmail.com"><i class="far fa-envelope"></i></a>
-                                <a href=""><i  class="fab fa-whatsapp"></i></a>
+                                <a href="https://wa.me/447466216535/?text=urlencodedtext"><i  class="fab fa-whatsapp"></i></a>
                             </div>
                         </div>
                     </div>

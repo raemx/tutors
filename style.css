@@ -18,6 +18,10 @@ html, body {
 
 /* Navbar */
 
+
+/* navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;..");
+} */
 .navbar-nav li{
   padding-right: 20px;
 }
@@ -74,17 +78,20 @@ html, body {
 } 
 
 
-.card, .big{
-  top: 45%;
+/* .card, .big{
+  /* top: 45%; 
   transform: translateY(-45%);
   background-color: rgba(196, 27, 52, 0.8);
-}
+} */
 
 .card {
   background-color: #2a323d;
   margin: auto;
   /* transform: scale(0.8, 0.8); */
+  color: #845404 ;
+
 }
+
 
 .btn-primary{
   background-color: black;
@@ -105,9 +112,22 @@ html, body {
 
 /* Jumbotron */
 
-.jumbotron{
+.container-fluid .row.welcome.jumbotron{
   
   background-color: #2a323d;
+  width: 80%;
+}
+
+
+.container-fluid.three .welcome.jumbotron{
+    
+  background-color: #717d81 ;
+  width: 100%;
+  
+}
+
+.row{
+  align-items: center;
 }
 
 .col-12 h1{
@@ -217,6 +237,7 @@ hr.light-100{
     font-size: 4em;
     padding: 2rem;
   }
+
 }
 @media (max-width: 768px) {
   .carousel-caption{
@@ -237,11 +258,22 @@ hr.light-100{
     font-weight: 400;
     padding-bottom: .1rem;
   } 
+  .jumbotron{
+    padding-bottom: 3rem;
+    margin-bottom: 1rem;
+  }
   
   
 }
 @media (max-width: 576px) {
-  
+    .card-body{
+      display: flex;
+		flex-direction: column;
+    width: 70%;
+    }
+
+
+
 }
 
 /*---Firefox Bug Fix --*/
