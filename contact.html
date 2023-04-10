@@ -1,4 +1,5 @@
 
+<!DOCTYPE html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,7 +23,7 @@
 
 
 .contact-us {
-  background: #f8f4e5;
+background: gray;
   padding: 50px 100px;
   border-top: 10px solid #f45702;
 }
@@ -115,54 +116,8 @@ textarea:-webkit-autofill:focus {
 
 </style>
 
-<body>
 
-<?php
 
-$errors = [];
-$errorMessage = '';
-
-if (!empty($_POST)) {
-   $name = $_POST['name'];
-   $email = $_POST['email'];
-   $message = $_POST['message'];
-
-   if (empty($name)) {
-       $errors[] = 'Name is empty';
-   }
-
-   if (empty($email)) {
-       $errors[] = 'Email is empty';
-   } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-       $errors[] = 'Email is invalid';
-   }
-
-   if (empty($message)) {
-       $errors[] = 'Message is empty';
-   }
-
-   if (empty($errors)) {
-       $toEmail = 'example@example.com';
-       $emailSubject = 'New email from your contact form';
-       $headers = ['From' => $email, 'Reply-To' => $email, 'Content-type' => 'text/html; charset=utf-8'];
-       $bodyParagraphs = ["Name: {$name}", "Email: {$email}", "Message:", $message];
-       $body = join(PHP_EOL, $bodyParagraphs);
-
-       if (mail($toEmail, $emailSubject, $body, $headers)) 
-
-           header('Location: thank-you.html');
-       } else {
-           $errorMessage = 'Oops, something went wrong. Please try again later';
-       }
-
-   } else {
-
-       $allErrors = join('<br/>', $errors);
-       $errorMessage = "<p style='color: red;'>{$allErrors}</p>";
-   }
-}
-
-?>
 <html>
 <body>
 
@@ -174,10 +129,12 @@ if (!empty($_POST)) {
     <!-- md is breakpoint where it'll switch from mobile to website, light is the white background and dark text, sticky navbar  -->
         <div class="container-fluid"> 
             <!-- takes full screen -->
-            <a class="navbar-brand" href="index.html"><img src="img/logo.jpg"></a>
+            <a class="navbar-brand" href="index.html"><img src="img/logo.JPG"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"> 
                 <!-- collapse allows it to close -->
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon">   
+                <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
+            </span>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
@@ -190,33 +147,34 @@ if (!empty($_POST)) {
                         <a class="nav-link" href="reviews.html">Reviews</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="contact.php">Contact</a>
                     </li>
             </div>
         </div>
     </nav> 
-  
 
-    
+
 <div class="contact-us">
-    <form action="#">
-      <label for="customerName">NAME <em>&#x2a;</em>
+<h1 class="display-2 first">Contact Us</h1>
+    <form method="post" action="post.php" id="contact-form">
+      <label for="name">NAME <em>&#x2a;</em>
     </label>
-    <input id="customerName" name="customerName" required="" type="text" />
-    <label for="customerEmail">EMAIL <em>&#x2a;</em>
+    <input id="name" name="name" required="" type="text" />
+    <label for="email">EMAIL <em>&#x2a;</em>
     </label>
-    <input id="customerEmail" name="customerEmail" required="" type="email" />
-    <label for="customerPhone">PHONE</label>
-    <input id="customerPhone" name="customerPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" type="tel" />
-    <label for="customerNote">YOUR MESSAGE <em>&#x2a;</em></label>
-    <textarea id="customerNote" name="customerNote" required="" rows="4"></textarea>
+    <input id="email" name="email" required="" type="email" />
+    <label for="phone">PHONE</label>
+    <input id="phone" name="phone" type="tel" />
+    <label for="message">YOUR MESSAGE <em>&#x2a;</em></label>
+    <textarea id="message" name="message" required="" rows="4"></textarea>
+    <button id="customerOrder">SUBMIT</button>
 
     </form>
   </div>
 
           <!-- Footer -->
           <footer>
-            <div class="container-fluid padding">
+            <div class="container-fluid padding" style="background-image: url('img/quran.jpg') no-repeat cover;">
                 <div class="row text-center">
                     <div class="container-fluid">
                         <div class="row text-center padding ">
@@ -226,7 +184,7 @@ if (!empty($_POST)) {
                             <div class="col-12 social padding">
                                 <a href="https://www.facebook.com/ArabicTutors/"><i class="fab fa-facebook"></i></a>
                                 <a href="mailto:onlinequran779@gmail.com"><i class="far fa-envelope"></i></a>
-                                <a href=""><i  class="fab fa-whatsapp"></i></a>
+                                <a href="https://wa.me/447466216535/?text=urlencodedtext"><i  class="fab fa-whatsapp"></i></a>
                             </div>
                         </div>
                     </div>
@@ -255,29 +213,29 @@ if (!empty($_POST)) {
          }
      };
 
-     const form = document.getElementById('contact-form');
-     form.addEventListener('submit', function (event) {
+    //  const form = document.getElementById('contact-form');
+    //  form.addEventListener('submit', function (event) {
 
-         const formValues = {
-             name: form.elements.name.value,
-             email: form.elements.email.value,
-             message: form.elements.message.value
-         };
+    //      const formValues = {
+    //          name: form.elements.name.value,
+    //          email: form.elements.email.value,
+    //          message: form.elements.message.value
+    //      };
 
 
-         const errors = validate(formValues, constraints);
-         if (errors) {
-             event.preventDefault();
-             const errorMessage = Object
-                 .values(errors)
-                 .map(function (fieldValues) {
-                     return fieldValues.join(', ')
-                 })
-                 .join("\n");
+    //      const errors = validate(formValues, constraints);
+    //      if (errors) {
+    //          event.preventDefault();
+    //          const errorMessage = Object
+    //              .values(errors)
+    //              .map(function (fieldValues) {
+    //                  return fieldValues.join(', ')
+    //              })
+    //              .join("\n");
 
-             alert(errorMessage);
-         }
-     }, false);
+    //          alert(errorMessage);
+    //      }
+    //  }, false);
  </script>
 
   </body>
