@@ -5,8 +5,7 @@ html, body {
     height: 100%;
     width: 100%;
     font-family: 'Poppins', sans-sarif;
-    color: #000000;
-    background-color: black;
+    background-color: #2a323d;
   }
 
   section{
@@ -47,7 +46,9 @@ html, body {
     clear: both;
   }
 
-
+  div#carousel-inner{
+    background-color: white;
+  }
 
   
   .zero{

@@ -1,32 +1,40 @@
 <?php
 
-$name = $_POST["name"];
-$email = $_POST["email"];
-$phone = $_POST["phone"];
-$message = $_POST["message"];
+$name = mysqli_real_escape_string($_POST["name"]);
+$email = mysqli_real_escape_string($_POST["email"]);
+$phone = mysqli_real_escape_string($_POST["phone"]);
+$message = mysqli_real_escape_string($_POST["message"]);
 
 require "vendor/autoload.php";
 
-
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
 if(isset($_POST["send"])){
   $mail = new PHPMailer(true);
   $mail->isSMTP();
-  $mail->Host = "smtp.gmail.com";
+  $mail->Host = 'smtp.gmail.com';
   $mail->SMTPAuth = true;
   $mail->Username = 'onlinequran779@gmail.com';
-  $mail->password = 'zdspusvmzzjmkczf';
+  $mail->Password = 'zdspusvmzzjmkczf';
   $mail->SMTPSecure = 'ssl';
   $mail->Port = 465;
-  $mail->setFrom("onlinequran779@gmail.com");
-  $mail->addAddress($_POST["email"]);
+  $mail->setFrom('onlinequran779@gmail.com');
+  $mail->addAddress($email);
   $mail->isHTML(true);
-  $mail->Subject = "New Message from Arabic Tutors Website ";
+  $mail->Subject = 'New Message from Arabic Tutors Website';
   $mail->Body = $message;
+  
   $mail->send();
 
+  if(!$mail->Send()) {
+    echo "Error while sending Email.";
+    var_dump($mail);
+  } else {
+      header("Location: contactsent.html");
+  }
+  
 }
 
 // $mail = new PHPMailer(true);

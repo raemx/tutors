@@ -12,13 +12,15 @@
   border-top: 10px solid #f45702;
 }
 
-label, input, textarea {
+/* label, input, textarea {
   display: block;
   width: 100%;
-  font-size: 12pt;
+  font-size: 14pt;
   line-height: 24pt;
   font-family: "Spartan";
-}
+  font-weight: bold;
+  color: white;
+} */
 
 input {
   margin-bottom: 24pt;

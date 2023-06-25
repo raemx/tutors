@@ -13,7 +13,7 @@ html, body {
 
 .navbar {
   padding: .8rem;
-  
+  background-color: #2a323d;
 }
 
 /* Navbar */
@@ -27,7 +27,7 @@ html, body {
 }
 
 .navbar-brand, .nav-link, .navbar-nav, .ml-auto{
-  color: #845404;
+  color: #2a323d;
 }
 
 .nav-link{
@@ -38,12 +38,10 @@ nav{
   background-color: #2a323d;
 }
 .navbar-custom {
-  background-color: BLACK;
+  background-color: #2a323d;
 }
 
-.navbar-brand img{
-  width: 7em;
-}
+
 /* First section carousel */
 
 .carousel-item img{
@@ -148,7 +146,7 @@ button.goal{
 
 }
 b{
-  color: #845404;
+  color: #717d81
 }
 
 .padding{
@@ -191,24 +189,23 @@ b{
 
 .fa-facebook{
   color: #3b5598;
-
 }
-
-.fa-twitter{
+.fa-envelope{
   color: #00aced;
 }
+.fa-whatsapp{
+  color: #006202;
+}
 
-.fa-linkedin:hover,
+.fa-whatsapp:hover,
 .fa-facebook:hover,
-.fa-twitter:hover,
-.fa-envelope:hover,
-.fa-linkedin:hover{
+.fa-envelope:hover{
   color: #d5d5d5;
 }
 
 footer{
   padding-top: 1.5em;
-  background-color: black;
+  background-color: white;
   color: #717d81;
   /* padding-top: 2rem; */
 }
@@ -275,6 +272,17 @@ hr.light-100{
     width: 70%;
     }
 
+    h1
+    {
+      font-size: 0.1em;
+      overflow: hidden;
+    }
+    .ul{
+      align-items: center;
+      padding-left: 0;
+      padding-right: 0;
+
+    }
 
 
 }
